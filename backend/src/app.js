@@ -11,9 +11,7 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors({
-  origin: ['https://sistema-votacion-facultades.netlify.app/', 'http://localhost:5173']
-}));
+app.use(cors({ origin: '*' }));
 app.use(express.json());
 
 app.get("/", (req, res) => {
